@@ -9,6 +9,12 @@ export class UserService {
     {email: 'a.a@a.com',password: 'aaaa', role: 1},
     {email: 'b.b@b.com',password: 'bbbb', role: 2},
     {email: 'c.c@c.com',password: 'cccc'}
+  ];
+
+  private role: Array<Role> = [
+    {id: 1, label: 'Admin'},
+    {id: 2, label: 'Agent'},
+    {id: 3, label: 'consumer'}
   ]
   constructor() { }
 
@@ -51,5 +57,9 @@ export interface User {
   email: string,
   password: string,
   role?: number
+}
+export interface Role {
+  id : number,
+  label : string
 }
 
