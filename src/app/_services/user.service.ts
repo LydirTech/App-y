@@ -11,11 +11,12 @@ export class UserService {
     {email: 'c.c@c.com',password: 'cccc'}
   ];
 
-  private role: Array<Role> = [
+  private listRole: Array<Role> = [
     {id: 1, label: 'Admin'},
     {id: 2, label: 'Agent'},
     {id: 3, label: 'consumer'}
   ]
+  
   constructor() { }
 
   getUser = (userP:User): any => {
@@ -24,8 +25,12 @@ export class UserService {
   }
 
   // a verifier
-  getUserInfo = (): Array<User> => {
+  getUsers = (): Array<User> => {
     return this.listUsers;
+  }
+
+  getRoles = (): Array<Role> => {
+    return this.listRole;
   }
    
 

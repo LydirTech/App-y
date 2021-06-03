@@ -8,6 +8,12 @@
         Password :
         <input type="password" formControlName="password">
     </label>
+    <label>
+        Role : 
+        <select formControlName="role">
+            <option *ngFor="let role of listRole" [ngValue]="role.id">{{ role.label }}</option>
+        </select>
+    </label>
     <button type="submit" [disabled]="!formRegister.valid" >Valider</button>
     <button type="reset">Vidé</button>
 </form>

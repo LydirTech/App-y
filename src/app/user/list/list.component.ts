@@ -10,8 +10,8 @@ export class ListComponent implements OnInit {
 
   constructor( private userS: UserService ) { console.log(this.users) }
 
-  users = this.userS.getUserInfo();
-  
+  users = this.userS.getUsers();
+
   ngOnInit(): void {
   }
 
