@@ -17,6 +17,12 @@ export class UserService {
     return rep;
   }
 
+  // a verifier
+  getUserInfo = (): Array<User> => {
+    return this.listUsers;
+  }
+   
+
   checkExist = (userP: User): boolean => {
     const rep = this.listUsers.filter((user)=> user.email === userP.email)
     if (rep.length < 1) {
